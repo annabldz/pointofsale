@@ -1,0 +1,120 @@
+ERROR - 2026-01-22 02:29:33 --> mysqli_sql_exception: Unknown column 's.id_user' in 'where clause' in I:\My Drive\mey\pengaduanbully\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\pengaduanbully\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\mey\pengaduanbully\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\mey\pengaduanbully\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\mey\pengaduanbully\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\mey\pengaduanbully\app\Models\M_ekskul.php(58): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\pengaduanbully\app\Controllers\Pengaduan.php(60): App\Models\M_ekskul->pengaduansiswa('7')
+#6 I:\My Drive\mey\pengaduanbully\system\CodeIgniter.php(933): App\Controllers\Pengaduan->index()
+#7 I:\My Drive\mey\pengaduanbully\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+#8 I:\My Drive\mey\pengaduanbully\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 I:\My Drive\mey\pengaduanbully\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 I:\My Drive\mey\pengaduanbully\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 I:\My Drive\mey\pengaduanbully\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 I:\My Drive\mey\pengaduanbully\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#13 {main}
+CRITICAL - 2026-01-22 02:29:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.id_user' in 'where clause'
+[Method: GET, Route: pengaduan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = :s.id_user:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Pengaduan.php(60): App\Models\M_ekskul->pengaduansiswa('7')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-22 02:29:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.id_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = \'7\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = \'7\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = :s.id_user:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Pengaduan.php(60): App\Models\M_ekskul->pengaduansiswa('7')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-22 02:29:33 --> [Caused by] mysqli_sql_exception: Unknown column 's.id_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = \'7\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = \'7\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = \'7\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa`=`siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+WHERE `s`.`id_user` = :s.id_user:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(58): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pengaduan.php(60): App\Models\M_ekskul->pengaduansiswa('7')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-22 02:33:48 --> ErrorException: Attempt to read property "nama" on array
+[Method: GET, Route: pengaduan]
+in APPPATH\Views\pengaduan\index.php on line 44.
+ 1 APPPATH\Views\pengaduan\index.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama" on array', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\pengaduan\\index.php', 44)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\pengaduan\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/pengaduan/index', [], true)
+ 5 APPPATH\Controllers\Pengaduan.php(82): view('/pengaduan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-22 03:02:02 --> ErrorException: Undefined property: stdClass::$nama
+[Method: GET, Route: pengaduan]
+in APPPATH\Views\pengaduan\index.php on line 45.
+ 1 APPPATH\Views\pengaduan\index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\pengaduan\\index.php', 45)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\pengaduan\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/pengaduan/index', [], true)
+ 5 APPPATH\Controllers\Pengaduan.php(82): view('/pengaduan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')

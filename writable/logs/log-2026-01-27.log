@@ -1,0 +1,1292 @@
+ERROR - 2026-01-27 06:25:33 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:33 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:34 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:34 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:34 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:34 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:34 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:34 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:35 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:35 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:35 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:35 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:35 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:35 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:36 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:36 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:36 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:36 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:39 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:39 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:40 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:40 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-27 06:25:43 --> mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\User.php(49): App\Models\M_ekskul->user()
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\User->index()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-27 06:25:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+[Method: GET, Route: user]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 06:25:43 --> [Caused by] mysqli_sql_exception: Column 'isdelete' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+JOIN `level` ON `user`.`level`=`level`.`id_level`
+WHERE `isdelete` = :isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(30): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\User.php(49): App\Models\M_ekskul->user()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:15:50 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: barang]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Barang.php(49): CodeIgniter\Model->__call('barang', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:16:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/barang/barang.php"
+[Method: GET, Route: barang]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/barang/barang.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/barang/barang', [], true)
+ 3 APPPATH\Controllers\Barang.php(61): view('/barang/barang', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:41:13 --> ErrorException: Undefined property: stdClass::$nama
+[Method: GET, Route: barang/edit/2]
+in APPPATH\Views\barang\editbarang.php on line 28.
+ 1 APPPATH\Views\barang\editbarang.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\barang\\editbarang.php', 28)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\barang\\editbarang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/barang/editbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(151): view('/barang/editbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:41:30 --> ErrorException: Undefined property: stdClass::$kategori
+[Method: GET, Route: barang/edit/2]
+in APPPATH\Views\barang\editbarang.php on line 66.
+ 1 APPPATH\Views\barang\editbarang.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$kategori', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\barang\\editbarang.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\barang\\editbarang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/barang/editbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(151): view('/barang/editbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:41:50 --> ErrorException: Undefined property: stdClass::$id_user
+[Method: GET, Route: barang/edit/2]
+in APPPATH\Views\barang\editbarang.php on line 72.
+ 1 APPPATH\Views\barang\editbarang.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_user', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\barang\\editbarang.php', 72)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\barang\\editbarang.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/barang/editbarang', [], true)
+ 5 APPPATH\Controllers\Barang.php(151): view('/barang/editbarang', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:44:12 --> ErrorException: Cannot use positional argument after named argument
+[Method: GET, Route: penjualan]
+in APPPATH\Config\Routes.php on line 82.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-01-27 07:44:22 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "penjualan/input.php"
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penjualan/input.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/input', [], true)
+ 3 APPPATH\Controllers\Penjualan.php(10): view('penjualan/input')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:50:02 --> ErrorException: foreach() argument must be of type array|object, string given
+[Method: POST, Route: penjualan/save]
+in APPPATH\Controllers\Penjualan.php on line 51.
+ 1 APPPATH\Controllers\Penjualan.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Controllers\\Penjualan.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->save()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:51:35 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: penjualan/nota/1]
+in APPPATH\Views\nota.php on line 2.
+ 1 APPPATH\Views\nota.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\nota.php', 2)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\nota.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nota', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(112): view('/nota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->nota('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:51:46 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: penjualan/nota/1]
+in APPPATH\Views\nota.php on line 2.
+ 1 APPPATH\Views\nota.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\nota.php', 2)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\nota.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nota', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(112): view('/nota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->nota('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-27 07:52:32 --> ErrorException: Trying to access array offset on value of type null
+[Method: GET, Route: penjualan/nota/1]
+in APPPATH\Views\nota.php on line 2.
+ 1 APPPATH\Views\nota.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\nota.php', 2)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\app\\Views\\nota.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nota', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(112): view('/nota', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->nota('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')

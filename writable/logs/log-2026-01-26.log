@@ -1,0 +1,324 @@
+CRITICAL - 2026-01-26 02:02:15 --> ErrorException: Attempt to read property "foto" on null
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "foto" on null', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(57): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 02:02:23 --> ErrorException: Attempt to read property "foto" on null
+[Method: GET, Route: dashboard]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "foto" on null', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Dashboard.php(57): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 05:38:25 --> Error: Call to undefined function App\Controllers\fastcgi_finish_request()
+[Method: GET, Route: logout]
+in APPPATH\Controllers\Login.php on line 111.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 05:43:52 --> Error: Call to undefined function App\Controllers\fastcgi_finish_request()
+[Method: GET, Route: logout]
+in APPPATH\Controllers\Login.php on line 111.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 05:55:24 --> ErrorException: Undefined property: stdClass::$nama_kelas
+[Method: GET, Route: pengaduan]
+in APPPATH\Views\pengaduan\index.php on line 66.
+ 1 APPPATH\Views\pengaduan\index.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_kelas', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\app\\Views\\pengaduan\\index.php', 66)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\app\\Views\\pengaduan\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/pengaduan/index', [], true)
+ 5 APPPATH\Controllers\Pengaduan.php(94): view('/pengaduan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+ERROR - 2026-01-26 05:56:54 --> mysqli_sql_exception: Unknown column 'siswa.nama_siswa' in 'field list' in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pengadu...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pengadu...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pengadu...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengadu...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\app\Models\M_ekskul.php(249): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\app\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-26 05:56:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.nama_siswa' in 'field list'
+[Method: GET, Route: pengaduan/laporanBulanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = :MONTH(pengaduan.tanggal):
+AND YEAR(pengaduan.tanggal) = :YEAR(pengaduan.tanggal):
+AND `siswa`.`id_rombel` = :siswa.id_rombel:
+ORDER BY `pengaduan`.`tanggal` ASC', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 05:56:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.nama_siswa' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = :MONTH(pengaduan.tanggal):
+AND YEAR(pengaduan.tanggal) = :YEAR(pengaduan.tanggal):
+AND `siswa`.`id_rombel` = :siswa.id_rombel:
+ORDER BY `pengaduan`.`tanggal` ASC', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 05:56:54 --> [Caused by] mysqli_sql_exception: Unknown column 'siswa.nama_siswa' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = :MONTH(pengaduan.tanggal):
+AND YEAR(pengaduan.tanggal) = :YEAR(pengaduan.tanggal):
+AND `siswa`.`id_rombel` = :siswa.id_rombel:
+ORDER BY `pengaduan`.`tanggal` ASC', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+ERROR - 2026-01-26 05:57:34 --> mysqli_sql_exception: Unknown column 'siswa.nama_siswa' in 'field list' in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pengadu...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pengadu...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pengadu...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengadu...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\app\Models\M_ekskul.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\app\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pengaduanbully\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-26 05:57:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.nama_siswa' in 'field list'
+[Method: GET, Route: pengaduan/laporanBulanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = :MONTH(pengaduan.tanggal):
+AND YEAR(pengaduan.tanggal) = :YEAR(pengaduan.tanggal):
+AND `siswa`.`id_rombel` = :siswa.id_rombel:
+ORDER BY `pengaduan`.`tanggal` ASC', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 05:57:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.nama_siswa' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = :MONTH(pengaduan.tanggal):
+AND YEAR(pengaduan.tanggal) = :YEAR(pengaduan.tanggal):
+AND `siswa`.`id_rombel` = :siswa.id_rombel:
+ORDER BY `pengaduan`.`tanggal` ASC', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 05:57:34 --> [Caused by] mysqli_sql_exception: Unknown column 'siswa.nama_siswa' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = \'1\'
+AND YEAR(pengaduan.tanggal) = \'2026\'
+AND `siswa`.`id_rombel` = \'1\'
+ORDER BY `pengaduan`.`tanggal` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pengaduan`.*, `siswa`.`nama_siswa`, `rombel`.`nama_rombel`, `user`.`username`
+FROM `pengaduan`
+JOIN `siswa` ON `pengaduan`.`id_siswa` = `siswa`.`id_siswa`
+JOIN `user` ON `siswa`.`id_user` = `user`.`id_user`
+LEFT JOIN `rombel` ON `rombel`.`id_rombel` = `siswa`.`id_rombel`
+WHERE MONTH(pengaduan.tanggal) = :MONTH(pengaduan.tanggal):
+AND YEAR(pengaduan.tanggal) = :YEAR(pengaduan.tanggal):
+AND `siswa`.`id_rombel` = :siswa.id_rombel:
+ORDER BY `pengaduan`.`tanggal` ASC', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pengaduan.php(478): App\Models\M_ekskul->getPengaduanByBulanRombel('1', '2026', '1')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-26 06:10:42 --> ErrorException: Undefined property: stdClass::$level
+[Method: GET, Route: pengaduan/detail/4]
+in APPPATH\Views\pengaduan\chat.php on line 107.
+ 1 APPPATH\Views\pengaduan\chat.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$level', 'C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\app\\Views\\pengaduan\\chat.php', 107)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\app\\Views\\pengaduan\\chat.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/pengaduan/chat', [], true)
+ 5 APPPATH\Controllers\Pengaduan.php(426): view('/pengaduan/chat', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->detail('4')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pengaduanbully\\public\\index.php')

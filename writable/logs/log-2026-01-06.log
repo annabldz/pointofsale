@@ -1,0 +1,283 @@
+CRITICAL - 2026-01-06 02:28:35 --> ErrorException: Undefined property: stdClass::$priority
+[Method: GET, Route: task]
+in APPPATH\Views\todolist.php on line 37.
+ 1 APPPATH\Views\todolist.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$priority', 'I:\\My Drive\\mey\\todolist\\app\\Views\\todolist.php', 37)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\todolist\\app\\Views\\todolist.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('todolist', [], true)
+ 5 APPPATH\Controllers\Todolist.php(15): view('todolist', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todolist->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todolist))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\todolist\\public\\index.php')
+ERROR - 2026-01-06 02:54:55 --> mysqli_sql_exception: Table 'todolist.tasks' doesn't exist in I:\My Drive\mey\todolist\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\todolist\system\Database\MySQLi\Connection.php(327): mysqli->query('\r\n\t\t\tSELECT\r\n\t\t...', 0)
+#1 I:\My Drive\mey\todolist\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('\r\n\t\t\tSELECT\r\n\t\t...')
+#2 I:\My Drive\mey\todolist\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('\r\n\t\t\tSELECT\r\n\t\t...')
+#3 I:\My Drive\mey\todolist\app\Models\M_todolist.php(21): CodeIgniter\Database\BaseConnection->query('\r\n\t\t\tSELECT\r\n\t\t...')
+#4 I:\My Drive\mey\todolist\app\Controllers\Todolist.php(18): App\Models\M_todolist->getSummaryTask()
+#5 I:\My Drive\mey\todolist\system\CodeIgniter.php(933): App\Controllers\Todolist->index()
+#6 I:\My Drive\mey\todolist\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todolist))
+#7 I:\My Drive\mey\todolist\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\todolist\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\todolist\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\todolist\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\todolist\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-06 02:54:55 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'todolist.tasks' doesn't exist
+[Method: GET, Route: task]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Models\M_todolist.php(21): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		')
+ 2 APPPATH\Controllers\Todolist.php(18): App\Models\M_todolist->getSummaryTask()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todolist->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todolist))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\todolist\\public\\index.php')
+CRITICAL - 2026-01-06 02:54:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'todolist.tasks' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		')
+ 3 APPPATH\Models\M_todolist.php(21): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		')
+ 4 APPPATH\Controllers\Todolist.php(18): App\Models\M_todolist->getSummaryTask()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todolist->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todolist))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\todolist\\public\\index.php')
+CRITICAL - 2026-01-06 02:54:55 --> [Caused by] mysqli_sql_exception: Table 'todolist.tasks' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		')
+ 4 APPPATH\Models\M_todolist.php(21): CodeIgniter\Database\BaseConnection->query('
+			SELECT
+				COUNT(*) AS total_task,
+				SUM(CASE WHEN status = \'selesai\' THEN 1 ELSE 0 END) AS task_selesai,
+				SUM(CASE WHEN status = \'belum_selesai\' THEN 1 ELSE 0 END) AS task_belum_selesai
+			FROM tasks
+		')
+ 5 APPPATH\Controllers\Todolist.php(18): App\Models\M_todolist->getSummaryTask()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todolist->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todolist))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\todolist\\public\\index.php')
+CRITICAL - 2026-01-06 03:23:11 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\M_todolist::updateStatus
+[Method: POST, Route: updatestatus]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Todolist.php(107): CodeIgniter\Model->__call('updateStatus', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todolist->updatestatus()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todolist))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\todolist\\public\\index.php')
+CRITICAL - 2026-01-06 03:23:22 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\M_todolist::updateStatus
+[Method: POST, Route: updatestatus]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Todolist.php(107): CodeIgniter\Model->__call('updateStatus', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Todolist->updatestatus()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Todolist))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\todolist\\public\\index.php')
+CRITICAL - 2026-01-06 16:46:25 --> Error: Class "App\Models\Olimpiade\M_belajar" not found
+[Method: GET, Route: login]
+in APPPATH\Controllers\Login.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+CRITICAL - 2026-01-06 16:53:10 --> Error: Class "App\Models\Olimpiade\M_ekskul" not found
+[Method: GET, Route: login]
+in APPPATH\Controllers\Login.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+CRITICAL - 2026-01-06 16:53:14 --> Error: Class "App\Models\Olimpiade\M_ekskul" not found
+[Method: GET, Route: login]
+in APPPATH\Controllers\Login.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Login->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+ERROR - 2026-01-06 16:54:31 --> mysqli_sql_exception: Table 'todolist.user' doesn't exist in J:\My Drive\mey\ekskul\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 J:\My Drive\mey\ekskul\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 J:\My Drive\mey\ekskul\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 J:\My Drive\mey\ekskul\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 J:\My Drive\mey\ekskul\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 J:\My Drive\mey\ekskul\app\Models\M_ekskul.php(90): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 J:\My Drive\mey\ekskul\app\Controllers\Login.php(54): App\Models\M_ekskul->getWhere('user', Array)
+#6 J:\My Drive\mey\ekskul\system\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+#7 J:\My Drive\mey\ekskul\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 J:\My Drive\mey\ekskul\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 J:\My Drive\mey\ekskul\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 J:\My Drive\mey\ekskul\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 J:\My Drive\mey\ekskul\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 J:\My Drive\mey\ekskul\system\rewrite.php(44): require_once('J:\\My Drive\\mey...')
+#13 {main}
+CRITICAL - 2026-01-06 16:54:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'todolist.user' doesn't exist
+[Method: POST, Route: aksi_login]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(90): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\Login.php(54): App\Models\M_ekskul->getWhere('user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+CRITICAL - 2026-01-06 16:54:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'todolist.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` = \'mey\'
+AND `password` = \'c4ca4238a0b923820dcc509a6f75849b\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` = \'mey\'
+AND `password` = \'c4ca4238a0b923820dcc509a6f75849b\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(90): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\Login.php(54): App\Models\M_ekskul->getWhere('user', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+CRITICAL - 2026-01-06 16:54:31 --> [Caused by] mysqli_sql_exception: Table 'todolist.user' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `user`
+WHERE `username` = \'mey\'
+AND `password` = \'c4ca4238a0b923820dcc509a6f75849b\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `user`
+WHERE `username` = \'mey\'
+AND `password` = \'c4ca4238a0b923820dcc509a6f75849b\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `user`
+WHERE `username` = \'mey\'
+AND `password` = \'c4ca4238a0b923820dcc509a6f75849b\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(90): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\Login.php(54): App\Models\M_ekskul->getWhere('user', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+CRITICAL - 2026-01-06 16:55:22 --> Error: Call to undefined function App\Controllers\log_activity()
+[Method: POST, Route: aksi_login]
+in APPPATH\Controllers\Login.php on line 62.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+CRITICAL - 2026-01-06 17:19:54 --> ErrorException: Undefined variable $level
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 21.
+ 1 APPPATH\Controllers\Dashboard.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $level', 'J:\\My Drive\\mey\\ekskul\\app\\Controllers\\Dashboard.php', 21)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')
+CRITICAL - 2026-01-06 17:20:12 --> ErrorException: Undefined variable $id_user
+[Method: GET, Route: dashboard]
+in APPPATH\Controllers\Dashboard.php on line 22.
+ 1 APPPATH\Controllers\Dashboard.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_user', 'J:\\My Drive\\mey\\ekskul\\app\\Controllers\\Dashboard.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\ekskul\\public\\index.php')

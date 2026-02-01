@@ -1,0 +1,1510 @@
+ERROR - 2026-01-08 03:04:16 --> mysqli_sql_exception: Unknown column 'j.waktu' in 'field list' in I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_...', 0)
+#1 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_...')
+#2 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_...')
+#3 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_...', Array, false)
+#4 I:\My Drive\mey\ekskul-master\ekskul-master\app\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+#6 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\ekskul-master\ekskul-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\ekskul-master\ekskul-master\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-08 03:04:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+[Method: GET, Route: nilai/nilaisiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:04:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:04:16 --> [Caused by] mysqli_sql_exception: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:06:43 --> ErrorException: Undefined property: stdClass::$nama_siswa
+[Method: GET, Route: nilai/list/1]
+in APPPATH\Views\nilai\list.php on line 9.
+ 1 APPPATH\Views\nilai\list.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_siswa', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\list.php', 9)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('nilai/list', [], true)
+ 5 APPPATH\Controllers\NIlai.php(120): view('nilai/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->list('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:07:06 --> ErrorException: Undefined property: stdClass::$nama_siswa
+[Method: GET, Route: nilai/list/1]
+in APPPATH\Views\nilai\list.php on line 9.
+ 1 APPPATH\Views\nilai\list.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_siswa', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\list.php', 9)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('nilai/list', [], true)
+ 5 APPPATH\Controllers\NIlai.php(120): view('nilai/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->list('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+ERROR - 2026-01-08 03:14:15 --> mysqli_sql_exception: Unknown column 'j.waktu' in 'field list' in I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_...', 0)
+#1 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_...')
+#2 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_...')
+#3 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_...', Array, false)
+#4 I:\My Drive\mey\ekskul-master\ekskul-master\app\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+#6 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\ekskul-master\ekskul-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\ekskul-master\ekskul-master\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-08 03:14:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+[Method: GET, Route: nilai/nilaisiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:16 --> [Caused by] mysqli_sql_exception: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+ERROR - 2026-01-08 03:14:21 --> mysqli_sql_exception: Unknown column 'j.waktu' in 'field list' in I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_...', 0)
+#1 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_...')
+#2 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_...')
+#3 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_...', Array, false)
+#4 I:\My Drive\mey\ekskul-master\ekskul-master\app\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+#6 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\ekskul-master\ekskul-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\ekskul-master\ekskul-master\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-08 03:14:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+[Method: GET, Route: nilai/nilaisiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:21 --> [Caused by] mysqli_sql_exception: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+ERROR - 2026-01-08 03:14:26 --> mysqli_sql_exception: Unknown column 'j.waktu' in 'field list' in I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_...', 0)
+#1 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_...')
+#2 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_...')
+#3 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_...', Array, false)
+#4 I:\My Drive\mey\ekskul-master\ekskul-master\app\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+#6 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\ekskul-master\ekskul-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\ekskul-master\ekskul-master\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-08 03:14:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+[Method: GET, Route: nilai/nilaisiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:26 --> [Caused by] mysqli_sql_exception: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+ERROR - 2026-01-08 03:14:50 --> mysqli_sql_exception: Unknown column 'j.waktu' in 'field list' in I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_...', 0)
+#1 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_...')
+#2 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_...')
+#3 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_...', Array, false)
+#4 I:\My Drive\mey\ekskul-master\ekskul-master\app\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+#6 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\ekskul-master\ekskul-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\ekskul-master\ekskul-master\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-08 03:14:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+[Method: GET, Route: nilai/nilaisiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:14:50 --> [Caused by] mysqli_sql_exception: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:24:34 --> ErrorException: Undefined variable $prof
+[Method: GET, Route: absensi/datasiswa]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prof', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Absensi.php(56): view('/admin/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Absensi->siswaview()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:24:40 --> ErrorException: Undefined variable $prof
+[Method: GET, Route: absensi/datasiswa]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prof', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Absensi.php(56): view('/admin/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Absensi->siswaview()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:24:45 --> ErrorException: Undefined variable $prof
+[Method: GET, Route: absensi/datasiswa]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prof', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Absensi.php(56): view('/admin/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Absensi->siswaview()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:24:51 --> ErrorException: Undefined variable $prof
+[Method: GET, Route: absensi/datasiswa]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prof', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Absensi.php(56): view('/admin/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Absensi->siswaview()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:24:56 --> ErrorException: Undefined variable $prof
+[Method: GET, Route: absensi/datasiswa]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prof', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Absensi.php(56): view('/admin/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Absensi->siswaview()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:25:17 --> ErrorException: Undefined property: stdClass::$nama_kelas
+[Method: GET, Route: absensi/datasiswa]
+in APPPATH\Views\siswa\siswa.php on line 48.
+ 1 APPPATH\Views\siswa\siswa.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_kelas', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\siswa\\siswa.php', 48)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\siswa\\siswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/siswa/siswa', [], true)
+ 5 APPPATH\Controllers\Absensi.php(63): view('/siswa/siswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Absensi->siswaview()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+ERROR - 2026-01-08 03:29:12 --> mysqli_sql_exception: Unknown column 'j.waktu' in 'field list' in I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_...', 0)
+#1 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_...')
+#2 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_...')
+#3 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_...', Array, false)
+#4 I:\My Drive\mey\ekskul-master\ekskul-master\app\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+#6 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\ekskul-master\ekskul-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\ekskul-master\ekskul-master\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-08 03:29:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+[Method: GET, Route: nilai/nilaisiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:29:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:29:12 --> [Caused by] mysqli_sql_exception: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+ERROR - 2026-01-08 03:38:50 --> mysqli_sql_exception: Unknown column 'j.waktu' in 'field list' in I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_...', 0)
+#1 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_...')
+#2 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_...')
+#3 I:\My Drive\mey\ekskul-master\ekskul-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_...', Array, false)
+#4 I:\My Drive\mey\ekskul-master\ekskul-master\app\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+#6 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 I:\My Drive\mey\ekskul-master\ekskul-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\ekskul-master\ekskul-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\ekskul-master\ekskul-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\ekskul-master\ekskul-master\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-08 03:38:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+[Method: GET, Route: nilai/nilaisiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:38:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:38:50 --> [Caused by] mysqli_sql_exception: Unknown column 'j.waktu' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `e`.`id_ekskul`, `e`.`nama_ekskul`, `j`.`hari`, `j`.`waktu`
+FROM `pendaftaran` `p`
+JOIN `jadwal` `j` ON `p`.`id_jadwal` = `j`.`id_jadwal`
+JOIN `ekskul` `e` ON `e`.`id_ekskul` = `j`.`id_ekskul`
+WHERE `p`.`id_siswa` = :p.id_siswa:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(67): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:39:16 --> ErrorException: Undefined variable $love
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 35.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php', 35)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(84): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:40:30 --> ErrorException: Undefined property: stdClass::$nilai
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 39.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nilai', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php', 39)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(129): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:41:22 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(139): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:41:28 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(139): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:41:33 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(139): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 03:41:39 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(139): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\ekskul-master\\ekskul-master\\public\\index.php')
+CRITICAL - 2026-01-08 04:14:23 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(139): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:15:52 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:16:17 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:17:19 --> ErrorException: Undefined array key "nama_ekskul"
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_ekskul"', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:17:54 --> ErrorException: Undefined array key "nama_ekskul"
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 41.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_ekskul"', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 41)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:18:07 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:18:36 --> ErrorException: Attempt to read property "nama_ekskul" on array
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 38.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_ekskul" on array', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:19:35 --> ErrorException: Undefined variable $data
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Controllers\NIlai.php on line 134.
+ 1 APPPATH\Controllers\NIlai.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Controllers\\NIlai.php', 134)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:19:53 --> ErrorException: Undefined variable $e
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 41.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $e', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 41)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:20:02 --> ErrorException: Undefined property: stdClass::$id_ekskul
+[Method: GET, Route: nilai/nilaisiswa]
+in APPPATH\Views\nilai\nilaisiswa.php on line 41.
+ 1 APPPATH\Views\nilai\nilaisiswa.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$id_ekskul', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php', 41)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\nilaisiswa.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/nilaisiswa', [], true)
+ 5 APPPATH\Controllers\NIlai.php(140): view('/nilai/nilaisiswa', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->indexsiswa()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:20:40 --> ErrorException: Undefined property: stdClass::$nama
+[Method: GET, Route: nilai/pdfsiswa/1]
+in APPPATH\Controllers\NIlai.php on line 174.
+ 1 APPPATH\Controllers\NIlai.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Controllers\\NIlai.php', 174)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->pdfsiswa('1')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:22:21 --> ErrorException: Undefined property: stdClass::$nama_siswa
+[Method: GET, Route: nilai/pdfsiswa/1]
+in APPPATH\Controllers\NIlai.php on line 175.
+ 1 APPPATH\Controllers\NIlai.php(175): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_siswa', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Controllers\\NIlai.php', 175)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->pdfsiswa('1')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+ERROR - 2026-01-08 04:31:17 --> mysqli_sql_exception: Unknown column 's.nama' in 'field list' in C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_...', 0)
+#1 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_...')
+#2 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_...')
+#3 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\NIlai.php(441): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+#6 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\7U400.COM\Downloads\ekskul2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\7U400.COM\Downloads\ekskul2\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#12 {main}
+CRITICAL - 2026-01-08 04:31:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.nama' in 'field list'
+[Method: GET, Route: nilai/listsiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(441): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:31:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(441): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:31:17 --> [Caused by] mysqli_sql_exception: Unknown column 's.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(441): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+ERROR - 2026-01-08 04:31:44 --> mysqli_sql_exception: Unknown column 's.nama' in 'field list' in C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_...', 0)
+#1 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_...')
+#2 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_...')
+#3 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+#6 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\7U400.COM\Downloads\ekskul2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\7U400.COM\Downloads\ekskul2\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#12 {main}
+CRITICAL - 2026-01-08 04:31:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.nama' in 'field list'
+[Method: GET, Route: nilai/listsiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:31:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:31:44 --> [Caused by] mysqli_sql_exception: Unknown column 's.nama' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `s`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+ERROR - 2026-01-08 04:31:54 --> mysqli_sql_exception: Unknown column 'siswa.id_user' in 'on clause' in C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_...', 0)
+#1 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_...')
+#2 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_...')
+#3 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+#6 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\7U400.COM\Downloads\ekskul2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\7U400.COM\Downloads\ekskul2\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#12 {main}
+CRITICAL - 2026-01-08 04:31:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_user' in 'on clause'
+[Method: GET, Route: nilai/listsiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:31:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'siswa.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:31:54 --> [Caused by] mysqli_sql_exception: Unknown column 'siswa.id_user' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`
+FROM `siswa` `s`
+JOIN `user` ON `siswa`.`id_user`=`user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(442): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:32:46 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/guru/header.php"
+[Method: GET, Route: nilai/listsiswa]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/guru/header.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/guru/header', [], true)
+ 3 APPPATH\Controllers\NIlai.php(446): view('/guru/header')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:32:54 --> ErrorException: Undefined variable $prof
+[Method: GET, Route: nilai/listsiswa]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $prof', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\NIlai.php(446): view('/admin/header')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+ERROR - 2026-01-08 04:36:47 --> mysqli_sql_exception: Unknown column 'c' in 'field list' in C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_...', 0)
+#1 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_...')
+#2 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_...')
+#3 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+#6 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\7U400.COM\Downloads\ekskul2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\7U400.COM\Downloads\ekskul2\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#12 {main}
+CRITICAL - 2026-01-08 04:36:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c' in 'field list'
+[Method: GET, Route: nilai/listsiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:36:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:36:47 --> [Caused by] mysqli_sql_exception: Unknown column 'c' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `c`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+ERROR - 2026-01-08 04:37:02 --> mysqli_sql_exception: Unknown column 'r.nama_kelas' in 'field list' in C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_...', 0)
+#1 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_...')
+#2 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_...')
+#3 C:\Users\7U400.COM\Downloads\ekskul2\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+#6 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+#7 C:\Users\7U400.COM\Downloads\ekskul2\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\7U400.COM\Downloads\ekskul2\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\7U400.COM\Downloads\ekskul2\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\7U400.COM\Downloads\ekskul2\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#12 {main}
+CRITICAL - 2026-01-08 04:37:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'r.nama_kelas' in 'field list'
+[Method: GET, Route: nilai/listsiswa]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 2 APPPATH\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:37:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'r.nama_kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 4 APPPATH\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:37:02 --> [Caused by] mysqli_sql_exception: Unknown column 'r.nama_kelas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `s`.`id_siswa`, `user`.`nama`, `s`.`nis`, `r`.`nama_rombel`, `r`.`nama_kelas`, `r`.`nama_jurusan`
+FROM `siswa` `s`
+JOIN `user` ON `s`.`id_user` = `user`.`id_user`
+JOIN `rombel` `r` ON `s`.`id_rombel` = `r`.`id_rombel`
+JOIN `kelas` ON `r`.`id_kelas`=`kelas`.`id_kelas`
+JOIN `jurusan` ON `r`.`id_jurusan`=`jurusan`.`id_jurusan`
+WHERE `r`.`id_guru` = :r.id_guru:', [...], false)
+ 5 APPPATH\Controllers\NIlai.php(445): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:37:23 --> ErrorException: Attempt to read property "nama_rombel" on array
+[Method: GET, Route: nilai/listsiswa]
+in APPPATH\Views\nilai\siswawali.php on line 2.
+ 1 APPPATH\Views\nilai\siswawali.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_rombel" on array', 'C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\siswawali.php', 2)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\app\\Views\\nilai\\siswawali.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nilai/siswawali', [], true)
+ 5 APPPATH\Controllers\NIlai.php(463): view('/nilai/siswawali', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:48:36 --> ArgumentCountError: Too few arguments to function App\Models\M_ekskul::getEkskulInstruktur(), 1 passed in C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\Absensi.php on line 23 and exactly 2 expected
+[Method: GET, Route: absensi]
+in APPPATH\Models\M_ekskul.php on line 90.
+ 1 APPPATH\Controllers\Absensi.php(23): App\Models\M_ekskul->getEkskulInstruktur('1')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Absensi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Absensi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:48:59 --> ArgumentCountError: Too few arguments to function App\Models\M_ekskul::getEkskulInstruktur(), 1 passed in C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\NIlai.php on line 23 and exactly 2 expected
+[Method: GET, Route: nilai]
+in APPPATH\Models\M_ekskul.php on line 90.
+ 1 APPPATH\Controllers\NIlai.php(23): App\Models\M_ekskul->getEkskulInstruktur('1')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')
+CRITICAL - 2026-01-08 04:50:01 --> ArgumentCountError: Too few arguments to function App\Models\M_ekskul::getEkskulInstruktur(), 1 passed in C:\Users\7U400.COM\Downloads\ekskul2\app\Controllers\NIlai.php on line 459 and exactly 2 expected
+[Method: GET, Route: nilai/listsiswa]
+in APPPATH\Models\M_ekskul.php on line 90.
+ 1 APPPATH\Controllers\NIlai.php(459): App\Models\M_ekskul->getEkskulInstruktur('1')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Nilai->listSiswaWali()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Nilai))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\ekskul2\\public\\index.php')

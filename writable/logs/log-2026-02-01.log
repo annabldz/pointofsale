@@ -1,0 +1,210 @@
+ERROR - 2026-02-01 05:45:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pointofsale', 3306, '', 0)
+#1 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Models\M_ekskul.php(405): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Login.php(75): App\Models\M_ekskul->getWhere('user', Array)
+#6 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+#7 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\7U400.COM\Downloads\pointofsale-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\7U400.COM\Downloads\pointofsale-master\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Models\M_ekskul.php(405): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Login.php(75): App\Models\M_ekskul->getWhere('user', Array)
+#5 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+#6 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\7U400.COM\Downloads\pointofsale-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\7U400.COM\Downloads\pointofsale-master\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#12 {main}
+CRITICAL - 2026-02-01 05:45:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: aksi_login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\M_ekskul.php(405): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Login.php(75): App\Models\M_ekskul->getWhere('user', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+ERROR - 2026-02-01 05:46:01 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'pointofsale', 3306, '', 0)
+#1 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Models\M_ekskul.php(405): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Login.php(75): App\Models\M_ekskul->getWhere('user', Array)
+#6 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+#7 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\7U400.COM\Downloads\pointofsale-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\7U400.COM\Downloads\pointofsale-master\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Models\M_ekskul.php(405): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#4 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Login.php(75): App\Models\M_ekskul->getWhere('user', Array)
+#5 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+#6 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\Users\7U400.COM\Downloads\pointofsale-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\Users\7U400.COM\Downloads\pointofsale-master\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#12 {main}
+CRITICAL - 2026-02-01 05:46:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+[Method: POST, Route: aksi_login]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user`
+WHERE `username` = :username:
+AND `password` = :password:', [...], false)
+ 3 APPPATH\Models\M_ekskul.php(405): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 4 APPPATH\Controllers\Login.php(75): App\Models\M_ekskul->getWhere('user', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->aksi_login()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:08:29 --> ErrorException: Undefined property: App\Controllers\Barang::$M_barang
+[Method: GET, Route: barang/printBarcode/2]
+in APPPATH\Controllers\Barang.php on line 117.
+ 1 APPPATH\Controllers\Barang.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Barang::$M_barang', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Controllers\\Barang.php', 117)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->printBarcode('2')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:08:58 --> ErrorException: Undefined property: App\Controllers\Barang::$M_barang
+[Method: GET, Route: barang/printBarcode/2]
+in APPPATH\Controllers\Barang.php on line 119.
+ 1 APPPATH\Controllers\Barang.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Barang::$M_barang', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Controllers\\Barang.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->printBarcode('2')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:09:06 --> ErrorException: Undefined property: App\Controllers\Barang::$M_barang
+[Method: GET, Route: barang/printBarcode/2]
+in APPPATH\Controllers\Barang.php on line 119.
+ 1 APPPATH\Controllers\Barang.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Barang::$M_barang', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Controllers\\Barang.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->printBarcode('2')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:09:20 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\M_Barang::getById
+[Method: GET, Route: barang/printBarcode/2]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\Barang.php(119): CodeIgniter\Model->__call('getById', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->printBarcode('2')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:09:48 --> ErrorException: Attempt to read property "nama_barang" on array
+[Method: GET, Route: barang/printBarcode/2]
+in APPPATH\Views\barang\print_barcode.php on line 77.
+ 1 APPPATH\Views\barang\print_barcode.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_barang" on array', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\barang\\print_barcode.php', 77)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\barang\\print_barcode.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('barang/print_barcode', [], true)
+ 5 APPPATH\Controllers\Barang.php(121): view('barang/print_barcode', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->printBarcode('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:10:54 --> ErrorException: Attempt to read property "nama_barang" on array
+[Method: GET, Route: barang/printBarcode/2]
+in APPPATH\Views\barang\print_barcode.php on line 77.
+ 1 APPPATH\Views\barang\print_barcode.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_barang" on array', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\barang\\print_barcode.php', 77)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\barang\\print_barcode.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('barang/print_barcode', [], true)
+ 5 APPPATH\Controllers\Barang.php(121): view('barang/print_barcode', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->printBarcode('2')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:20:04 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: penjualan/save]
+in APPPATH\Controllers\Penjualan.php on line 497.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->save()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:49:16 --> ParseError: syntax error, unexpected token "public"
+[Method: POST, Route: penjualan/getBarang]
+in APPPATH\Controllers\Penjualan.php on line 521.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Controllers\\Penjualan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Penjualan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Penjualan')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Penjualan', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-02-01 06:49:17 --> ParseError: syntax error, unexpected token "public"
+[Method: POST, Route: penjualan/getBarang]
+in APPPATH\Controllers\Penjualan.php on line 521.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Controllers\\Penjualan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Penjualan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Penjualan')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Penjualan', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')

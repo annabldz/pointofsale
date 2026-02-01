@@ -1,0 +1,444 @@
+CRITICAL - 2026-01-20 05:48:38 --> Error: Class "App\Models\M_pengaduan" not found
+[Method: GET, Route: menu]
+in APPPATH\Controllers\Menu.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Menu->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+ERROR - 2026-01-20 05:51:18 --> mysqli_sql_exception: Table 'ekskul.menu' doesn't exist in I:\My Drive\mey\pengaduanbully\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 I:\My Drive\mey\pengaduanbully\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 I:\My Drive\mey\pengaduanbully\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 I:\My Drive\mey\pengaduanbully\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 I:\My Drive\mey\pengaduanbully\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 I:\My Drive\mey\pengaduanbully\app\Controllers\Menu.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 I:\My Drive\mey\pengaduanbully\system\CodeIgniter.php(933): App\Controllers\Menu->index()
+#6 I:\My Drive\mey\pengaduanbully\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+#7 I:\My Drive\mey\pengaduanbully\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 I:\My Drive\mey\pengaduanbully\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 I:\My Drive\mey\pengaduanbully\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 I:\My Drive\mey\pengaduanbully\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 I:\My Drive\mey\pengaduanbully\system\rewrite.php(44): require_once('I:\\My Drive\\mey...')
+#12 {main}
+CRITICAL - 2026-01-20 05:51:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'ekskul.menu' doesn't exist
+[Method: GET, Route: menu]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 2 APPPATH\Controllers\Menu.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 05:51:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'ekskul.menu' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 4 APPPATH\Controllers\Menu.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 05:51:18 --> [Caused by] mysqli_sql_exception: Table 'ekskul.menu' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `menu`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `menu`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `menu`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`', [], false)
+ 5 APPPATH\Controllers\Menu.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:06:32 --> ErrorException: Undefined variable $love
+[Method: GET, Route: datamenu]
+in APPPATH\Views\menu\data.php on line 38.
+ 1 APPPATH\Views\menu\data.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/data', [], true)
+ 5 APPPATH\Controllers\Menu.php(60): view('/menu/data')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->data()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:09:42 --> ErrorException: Undefined variable $love
+[Method: GET, Route: datamenu]
+in APPPATH\Views\menu\data.php on line 38.
+ 1 APPPATH\Views\menu\data.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/data', [], true)
+ 5 APPPATH\Controllers\Menu.php(60): view('/menu/data')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->data()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:09:58 --> ErrorException: Undefined variable $love
+[Method: GET, Route: datamenu]
+in APPPATH\Views\menu\data.php on line 38.
+ 1 APPPATH\Views\menu\data.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/data', [], true)
+ 5 APPPATH\Controllers\Menu.php(60): view('/menu/data')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->data()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:10:07 --> ErrorException: Undefined variable $love
+[Method: GET, Route: datamenu]
+in APPPATH\Views\menu\data.php on line 38.
+ 1 APPPATH\Views\menu\data.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/data', [], true)
+ 5 APPPATH\Controllers\Menu.php(60): view('/menu/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->data()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:11:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/menu/inputmenu.php"
+[Method: GET, Route: menu/input]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/menu/inputmenu.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/inputmenu', [], true)
+ 3 APPPATH\Controllers\Menu.php(126): view('/menu/inputmenu', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->input()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:11:37 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/menu/inputmenu.php"
+[Method: GET, Route: menu/input]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/menu/inputmenu.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/inputmenu', [], true)
+ 3 APPPATH\Controllers\Menu.php(126): view('/menu/inputmenu', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->input()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:13:17 --> ErrorException: Undefined property: stdClass::$icons
+[Method: GET, Route: datamenu]
+in APPPATH\Views\menu\data.php on line 42.
+ 1 APPPATH\Views\menu\data.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$icons', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php', 42)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\data.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/data', [], true)
+ 5 APPPATH\Controllers\Menu.php(60): view('/menu/data', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->data()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:16:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/menu/editmenu.php"
+[Method: GET, Route: menu/edit/1]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/menu/editmenu.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/editmenu', [], true)
+ 3 APPPATH\Controllers\Menu.php(78): view('/menu/editmenu', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:16:46 --> ErrorException: Undefined variable $parent_menu
+[Method: GET, Route: menu/edit/1]
+in APPPATH\Views\menu\edit.php on line 41.
+ 1 APPPATH\Views\menu\edit.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $parent_menu', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php', 41)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/edit', [], true)
+ 5 APPPATH\Controllers\Menu.php(78): view('/menu/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:17:16 --> ErrorException: Undefined variable $menu_edit
+[Method: GET, Route: menu/edit/1]
+in APPPATH\Views\menu\edit.php on line 43.
+ 1 APPPATH\Views\menu\edit.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_edit', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php', 43)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/edit', [], true)
+ 5 APPPATH\Controllers\Menu.php(84): view('/menu/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:17:38 --> ErrorException: Attempt to read property "parent_id" on array
+[Method: GET, Route: menu/edit/1]
+in APPPATH\Views\menu\edit.php on line 43.
+ 1 APPPATH\Views\menu\edit.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "parent_id" on array', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php', 43)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/edit', [], true)
+ 5 APPPATH\Controllers\Menu.php(84): view('/menu/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:17:51 --> ErrorException: Undefined variable $parent_menu
+[Method: GET, Route: menu/edit/1]
+in APPPATH\Views\menu\edit.php on line 41.
+ 1 APPPATH\Views\menu\edit.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $parent_menu', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php', 41)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/edit', [], true)
+ 5 APPPATH\Controllers\Menu.php(84): view('/menu/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:18:09 --> ErrorException: Attempt to read property "parent_id" on array
+[Method: GET, Route: menu/edit/1]
+in APPPATH\Views\menu\edit.php on line 43.
+ 1 APPPATH\Views\menu\edit.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "parent_id" on array', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php', 43)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\menu\\edit.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/edit', [], true)
+ 5 APPPATH\Controllers\Menu.php(84): view('/menu/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:18:55 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: menu/edit/1]
+in APPPATH\Views\menu\edit.php on line 43.
+ 1 SYSTEMPATH\View\View.php(226): include()
+ 2 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/menu/edit', [], true)
+ 4 APPPATH\Controllers\Menu.php(84): view('/menu/edit', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:41:38 --> ErrorException: Undefined variable $menu_all
+[Method: GET, Route: menu]
+in APPPATH\Views\admin\header.php on line 96.
+ 1 APPPATH\Views\admin\header.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_all', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php', 96)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Menu.php(68): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:46:44 --> ErrorException: Undefined variable $menu_all
+[Method: GET, Route: user]
+in APPPATH\Views\admin\header.php on line 97.
+ 1 APPPATH\Views\admin\header.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_all', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php', 97)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\User.php(30): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:48:07 --> ErrorException: Undefined variable $menu_all
+[Method: GET, Route: user]
+in APPPATH\Views\admin\header.php on line 97.
+ 1 APPPATH\Views\admin\header.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu_all', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php', 97)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\User.php(72): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 06:48:43 --> ErrorException: Undefined variable $level
+[Method: GET, Route: user]
+in APPPATH\Controllers\User.php on line 31.
+ 1 APPPATH\Controllers\User.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $level', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Controllers\\User.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:02:01 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/kesiswaan/kesiswaan.php"
+[Method: GET, Route: kesiswaan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/kesiswaan/kesiswaan.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/kesiswaan/kesiswaan', [], true)
+ 3 APPPATH\Controllers\Kesiswaan.php(58): view('/kesiswaan/kesiswaan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kesiswaan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kesiswaan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:05:48 --> ErrorException: Attempt to read property "foto" on null
+[Method: GET, Route: user]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "foto" on null', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\User.php(56): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:05:58 --> ErrorException: Attempt to read property "foto" on null
+[Method: GET, Route: user]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "foto" on null', 'I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('I:\\My Drive\\mey\\pengaduanbully\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\User.php(56): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:31:43 --> Error: Class "App\Models\Olimpiade\M_log" not found
+[Method: GET, Route: menu]
+in APPPATH\Helpers\log_helper.php on line 7.
+ 1 APPPATH\Controllers\Menu.php(69): log_activity('1', 'Mengakses halaman Hak Akses Menu.')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:34:57 --> Error: Class "App\Models\Olimpiade\M_log" not found
+[Method: GET, Route: menu]
+in APPPATH\Helpers\log_helper.php on line 7.
+ 1 APPPATH\Controllers\Menu.php(70): log_activity('1', 'Mengakses halaman Hak Akses Menu.')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:35:20 --> Error: Class "App\Models\Olimpiade\M_log" not found
+[Method: GET, Route: menu]
+in APPPATH\Helpers\log_helper.php on line 7.
+ 1 APPPATH\Controllers\Menu.php(70): log_activity('1', 'Mengakses halaman Hak Akses Menu.')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Menu->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Menu))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:37:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: log]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\User.php(287): CodeIgniter\Model->__call('settings', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->log()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:38:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: log]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\User.php(287): CodeIgniter\Model->__call('settings', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->log()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-20 07:56:32 --> CodeIgniter\Exceptions\BadMethodCallException: Call to undefined method App\Models\M_log::logsession
+[Method: GET, Route: logsession]
+in SYSTEMPATH\Model.php on line 927.
+ 1 APPPATH\Controllers\User.php(337): CodeIgniter\Model->__call('logsession', [])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\User->session()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('I:\\My Drive\\mey\\pengaduanbully\\public\\index.php')

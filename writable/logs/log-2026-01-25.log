@@ -1,0 +1,23 @@
+CRITICAL - 2026-01-25 23:47:17 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "pengaduan/laporan_pdf.php"
+[Method: GET, Route: pengaduan/laporanBulanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pengaduan/laporan_pdf.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('pengaduan/laporan_pdf', [], true)
+ 3 APPPATH\Controllers\Pengaduan.php(448): view('pengaduan/laporan_pdf', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\pengaduanbully\\public\\index.php')
+CRITICAL - 2026-01-25 23:48:38 --> Error: Class "App\Controllers\Dompdf" not found
+[Method: GET, Route: pengaduan/laporanBulanan]
+in APPPATH\Controllers\Pengaduan.php on line 451.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Pengaduan->laporanBulanan()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pengaduan))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('J:\\My Drive\\mey\\pengaduanbully\\public\\index.php')

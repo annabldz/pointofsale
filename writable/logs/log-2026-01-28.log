@@ -1,0 +1,771 @@
+CRITICAL - 2026-01-28 06:10:56 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/setting]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(49): CodeIgniter\Model->__call('notasetting', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 06:11:35 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/nota/setting.php"
+[Method: GET, Route: nota/setting]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/nota/setting.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nota/setting', [], true)
+ 3 APPPATH\Controllers\NotaSetting.php(61): view('/nota/setting', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 06:22:28 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "/nota/inputsetting.php"
+[Method: GET, Route: nota/inputsetting]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/nota/inputsetting.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/nota/inputsetting', [], true)
+ 3 APPPATH\Controllers\NotaSetting.php(280): view('/nota/inputsetting', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->input()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 06:28:07 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(140): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 06:28:20 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(140): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 06:28:23 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(140): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 06:28:38 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(140): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 06:28:45 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(140): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 07:39:15 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(140): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 07:39:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\NotaSetting.php(140): CodeIgniter\Model->__call('where', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+ERROR - 2026-01-28 07:40:00 --> mysqli_sql_exception: Table 'pointofsale.id_notset' doesn't exist in C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Models\M_ekskul.php(284): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#5 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\app\Controllers\NotaSetting.php(140): App\Models\M_ekskul->getWhere('id_notset', Array)
+#6 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+#7 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+#8 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\Lab Komputer\Documents\mey (JANGAN BUKA PLIS)\pointofsale\system\rewrite.php(44): require_once('C:\\Users\\Lab Ko...')
+#13 {main}
+CRITICAL - 2026-01-28 07:40:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'pointofsale.id_notset' doesn't exist
+[Method: GET, Route: nota/editsetting/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = :id_notset:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(284): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 3 APPPATH\Controllers\NotaSetting.php(140): App\Models\M_ekskul->getWhere('id_notset', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 07:40:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'pointofsale.id_notset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = \'1\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = :id_notset:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(284): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 5 APPPATH\Controllers\NotaSetting.php(140): App\Models\M_ekskul->getWhere('id_notset', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 07:40:00 --> [Caused by] mysqli_sql_exception: Table 'pointofsale.id_notset' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1787): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `id_notset`
+WHERE `id_notset` = :id_notset:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(284): CodeIgniter\Database\BaseBuilder->getWhere([...])
+ 6 APPPATH\Controllers\NotaSetting.php(140): App\Models\M_ekskul->getWhere('id_notset', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\NotaSetting->edit('1')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\NotaSetting))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\Lab Komputer\\Documents\\mey (JANGAN BUKA PLIS)\\pointofsale\\public\\index.php')
+CRITICAL - 2026-01-28 11:39:35 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('253730161117', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:39:37 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('443910725007', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:39:38 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('875302100316', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:39:38 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('789004773692', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:39:39 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('588705241607', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:39:39 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('324781344382', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:39:39 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('482028506532', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:20 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('638348414540', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:24 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('829031699044', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:25 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('723610460757', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:25 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('618146416422', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:25 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('018876542213', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:25 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('825982332479', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:39 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('164869816222', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:39 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('393990155622', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:40:39 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('647486588563', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 11:41:48 --> Picqer\Barcode\Exceptions\BarcodeException: Neither the GD library nor the Imagick extension is installed!
+[Method: GET, Route: barang/generate-barcode]
+in VENDORPATH\picqer\php-barcode-generator\src\Renderers\PngRenderer.php on line 30.
+ 1 VENDORPATH\picqer\php-barcode-generator\src\BarcodeGeneratorPNG.php(26): Picqer\Barcode\Renderers\PngRenderer->__construct()
+ 2 APPPATH\Controllers\Barang.php(333): Picqer\Barcode\BarcodeGeneratorPNG->getBarcode('838613872751', 'EAN13', 2, 60)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->generateBarcode()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 15:47:33 --> ErrorException: Attempt to read property "foto" on null
+[Method: GET, Route: barang]
+in APPPATH\Views\admin\header.php on line 62.
+ 1 APPPATH\Views\admin\header.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "foto" on null', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\admin\\header.php', 62)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\admin\\header.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('/admin/header', [], true)
+ 5 APPPATH\Controllers\Barang.php(61): view('/admin/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Barang->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Barang))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 16:09:26 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: barangmasuk]
+in SYSTEMPATH\Database\BaseConnection.php on line 944.
+ 1 SYSTEMPATH\Model.php(713): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(917): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\BarangMasuk.php(50): CodeIgniter\Model->__call('barangmasuk', [])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BarangMasuk->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BarangMasuk))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:21:27 --> ErrorException: Undefined property: App\Controllers\Penjualan::$session
+[Method: GET, Route: penjualan]
+in APPPATH\Controllers\Penjualan.php on line 11.
+ 1 APPPATH\Controllers\Penjualan.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Penjualan::$session', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Controllers\\Penjualan.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:21:40 --> ParseError: syntax error, unexpected token "protected"
+[Method: GET, Route: penjualan]
+in APPPATH\Controllers\Penjualan.php on line 10.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Controllers\\Penjualan.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Penjualan')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Penjualan')
+ 4 SYSTEMPATH\CodeIgniter.php(885): class_exists('\\App\\Controllers\\Penjualan', true)
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:22:38 --> Error: Class "App\Controllers\M_ekskul" not found
+[Method: GET, Route: penjualan]
+in APPPATH\Controllers\Penjualan.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Penjualan->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+ERROR - 2026-01-28 23:22:50 --> mysqli_sql_exception: Unknown column 'penjulaan.id_nota' in 'on clause' in C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Penjualan.php(48): App\Models\M_ekskul->penjualan()
+#6 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+#7 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#8 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\7U400.COM\Downloads\pointofsale-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\7U400.COM\Downloads\pointofsale-master\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#13 {main}
+CRITICAL - 2026-01-28 23:22:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penjulaan.id_nota' in 'on clause'
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = :penjualan.isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Penjualan.php(48): App\Models\M_ekskul->penjualan()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:22:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penjulaan.id_nota' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = :penjualan.isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Penjualan.php(48): App\Models\M_ekskul->penjualan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:22:50 --> [Caused by] mysqli_sql_exception: Unknown column 'penjulaan.id_nota' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = :penjualan.isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Penjualan.php(48): App\Models\M_ekskul->penjualan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+ERROR - 2026-01-28 23:22:57 --> mysqli_sql_exception: Unknown column 'penjulaan.id_nota' in 'on clause' in C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Penjualan.php(50): App\Models\M_ekskul->penjualan()
+#6 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+#7 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+#8 C:\Users\7U400.COM\Downloads\pointofsale-master\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\7U400.COM\Downloads\pointofsale-master\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\Users\7U400.COM\Downloads\pointofsale-master\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\Users\7U400.COM\Downloads\pointofsale-master\system\rewrite.php(44): require_once('C:\\Users\\7U400....')
+#13 {main}
+CRITICAL - 2026-01-28 23:22:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penjulaan.id_nota' in 'on clause'
+[Method: GET, Route: penjualan]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = :penjualan.isdelete:', [...], false)
+ 2 APPPATH\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Penjualan.php(50): App\Models\M_ekskul->penjualan()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:22:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'penjulaan.id_nota' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = :penjualan.isdelete:', [...], false)
+ 4 APPPATH\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Penjualan.php(50): App\Models\M_ekskul->penjualan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:22:57 --> [Caused by] mysqli_sql_exception: Unknown column 'penjulaan.id_nota' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = 0')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penjualan`
+JOIN `user` ON `penjualan`.`id_user`=`user`.`id_user`
+JOIN `nota` ON `penjulaan`.`id_nota`=`nota`.`id_nota`
+WHERE `penjualan`.`isdelete` = :penjualan.isdelete:', [...], false)
+ 5 APPPATH\Models\M_ekskul.php(136): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Penjualan.php(50): App\Models\M_ekskul->penjualan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:31:34 --> ArgumentCountError: Too few arguments to function App\Models\M_ekskul::jwhere2(), 5 passed in C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Penjualan.php on line 142 and exactly 6 expected
+[Method: GET, Route: penjualan/edit/3]
+in APPPATH\Models\M_ekskul.php on line 358.
+ 1 APPPATH\Controllers\Penjualan.php(142): App\Models\M_ekskul->jwhere2('nota', 'user', 'penjualan.id_nota=nota.id_nota', 'penjualan.id_user=user.id_user', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:31:34 --> ArgumentCountError: Too few arguments to function App\Models\M_ekskul::jwhere2(), 5 passed in C:\Users\7U400.COM\Downloads\pointofsale-master\app\Controllers\Penjualan.php on line 142 and exactly 6 expected
+[Method: GET, Route: penjualan/edit/3]
+in APPPATH\Models\M_ekskul.php on line 358.
+ 1 APPPATH\Controllers\Penjualan.php(142): App\Models\M_ekskul->jwhere2('nota', 'user', 'penjualan.id_nota=nota.id_nota', 'penjualan.id_user=user.id_user', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:31:44 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "penjualan/edit.php"
+[Method: GET, Route: penjualan/edit/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penjualan/edit.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/edit', [], true)
+ 3 APPPATH\Controllers\Penjualan.php(159): view('penjualan/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:31:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "penjualan/edit.php"
+[Method: GET, Route: penjualan/edit/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penjualan/edit.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/edit', [], true)
+ 3 APPPATH\Controllers\Penjualan.php(159): view('penjualan/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:31:59 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "penjualan/edit.php"
+[Method: GET, Route: penjualan/edit/3]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('penjualan/edit.php')
+ 2 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/edit', [], true)
+ 3 APPPATH\Controllers\Penjualan.php(159): view('penjualan/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:32:13 --> ErrorException: Undefined variable $love
+[Method: GET, Route: penjualan/edit/3]
+in APPPATH\Views\penjualan\editpenjualan.php on line 23.
+ 1 APPPATH\Views\penjualan\editpenjualan.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php', 23)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/editpenjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(170): view('penjualan/editpenjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:32:35 --> ErrorException: Undefined variable $love
+[Method: GET, Route: penjualan/edit/3]
+in APPPATH\Views\penjualan\editpenjualan.php on line 23.
+ 1 APPPATH\Views\penjualan\editpenjualan.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php', 23)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/editpenjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(170): view('penjualan/editpenjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:32:36 --> ErrorException: Undefined variable $love
+[Method: GET, Route: penjualan/edit/3]
+in APPPATH\Views\penjualan\editpenjualan.php on line 23.
+ 1 APPPATH\Views\penjualan\editpenjualan.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php', 23)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/editpenjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(170): view('penjualan/editpenjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
+CRITICAL - 2026-01-28 23:32:38 --> ErrorException: Undefined variable $love
+[Method: GET, Route: penjualan/edit/3]
+in APPPATH\Views\penjualan\editpenjualan.php on line 23.
+ 1 APPPATH\Views\penjualan\editpenjualan.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $love', 'C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php', 23)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\app\\Views\\penjualan\\editpenjualan.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1199): CodeIgniter\View\View->render('penjualan/editpenjualan', [], true)
+ 5 APPPATH\Controllers\Penjualan.php(170): view('penjualan/editpenjualan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Penjualan->edit('3')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Penjualan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\7U400.COM\\Downloads\\pointofsale-master\\public\\index.php')
